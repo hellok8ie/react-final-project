@@ -1,51 +1,53 @@
-{ "products": [
-    {
-        "id": 1,
-        "name": "Youth Hoodie",
-        "description": "Grey hoodie with logo in youth sizes",
-        "size": ["youth S", "youth M", "youth L", "youth XL"],
-        "price": 15.99,
-        "img": "../public/product_imgs/child_hoodie.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Men's Half-Zip Pull-over",
-        "description": "Dark solid grey half-zip pull-over with logo in men's sizes",
-        "size":["mens S", "mens M", "mens L", "mens XL"],
-        "price": 20.99,
-        "img":"../public/product_imgs/mens_halfzip.jpg"
+{ 
+    "products": [
+        {
+            "id": 1,
+            "name": "Youth Hoodie",
+            "description": "Grey hoodie with logo in youth sizes",
+            "size": ["youth S", "youth M", "youth L", "youth XL"],
+            "price": 15.99,
+            "img": "https://i.imgur.com/XDG3mCi_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+        },
+        {
+            "id": 2,
+            "name": "Men's Half-Zip Pull-over",
+            "description": "Dark solid grey half-zip pull-over with logo in men's sizes",
+            "size":["mens S", "mens M", "mens L", "mens XL"],
+            "price": 20.99,
+            "img":"https://i.imgur.com/E7pNqrC.jpg"
 
-    },
-    {
-        "id": 3,
-        "name": "Women's Half-Zip Pull-over",
-        "description": "Marbled light grey half-zip pull-over with logo in women's sizes",
-        "size":["womens S", "womens M", "womens L", "womens XL"],
-        "price": 20.99,
-        "img":"../public/product_imgs/womens_halfzip.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Logo Hat",
-        "description": "Royal blue skull cap with logo",
-        "size":["youth", "adult"],
-        "price": 10.99,
-        "img":"../public/product_imgs/hat.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Youth Hat + Hoodie Set",
-        "description": "Youth grey hoodie and youth royal blue skull cap",
-        "size": "youth",
-        "price": 25.99,
-        "img":"../public/product_imgs/child_hat_hoodie.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Sticker",
-        "description": "All weather 5 x 2.5in sticker",
-        "size": "one size",
-        "price": 5.99,
-        "img":"../public/product_imgs/sticker.jpg"
-    }
-]}
+        },
+        {
+            "id": 3,
+            "name": "Women's Half-Zip Pull-over",
+            "description": "Marbled light grey half-zip pull-over with logo in women's sizes",
+            "size":["womens S", "womens M", "womens L", "womens XL"],
+            "price": 20.99,
+            "img":"https://i.imgur.com/Uft3Upm.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Logo Hat",
+            "description": "Royal blue skull cap with logo",
+            "size":["youth", "adult"],
+            "price": 10.99,
+            "img":"https://i.imgur.com/1D0wvoB.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Youth Hat + Hoodie Set",
+            "description": "Youth grey hoodie and youth royal blue skull cap",
+            "size": "youth",
+            "price": 25.99,
+            "img":"https://i.imgur.com/wZOGMti.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Sticker",
+            "description": "All weather 5 x 2.5in sticker",
+            "size": "one size",
+            "price": 5.99,
+            "img":"https://i.imgur.com/mYCzbbH.jpg"
+        }
+    ]
+}
