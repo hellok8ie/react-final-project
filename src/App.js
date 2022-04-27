@@ -2,6 +2,11 @@ import React from 'react';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FeaturedItems from './FeaturedItems';
+import About from './About';
+import ProductList from './ProductList';
+import ProductDetails from './ProductDetails';
+import EditProduct from './EditProduct';
+import NewProduct from './NewProduct';
 
 
 function App() {
@@ -10,6 +15,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}>
           <Route index element={<FeaturedItems/>}/>
+          <Route path='about' element={<About/>}/>
+          <Route path='products/add' element={<NewProduct/>}/>
+          <Route path='products/:productId/edit' element={<EditProduct/>}/>
+          <Route path='products/:productId' element={<ProductDetails/>}/>
+          <Route path='products' element={<ProductList/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

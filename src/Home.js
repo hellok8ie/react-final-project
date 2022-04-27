@@ -1,8 +1,8 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import logo from './53.jpg'
-import { Stack } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import { Nav, Form, Button, FormControl } from 'react-bootstrap';
 
 
 function Home() {
@@ -21,6 +21,23 @@ function Home() {
                     />{' '}
                 Russell Racing
                 </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/about">About Us</Nav.Link>
+                    <Nav.Link href="/products">Products</Nav.Link>
+                    <Nav.Link href="/products/add">Create</Nav.Link>
+                </Nav>
+                <Form className="d-flex">
+                    <FormControl
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                    />
+                </Form>
+                </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Outlet />
