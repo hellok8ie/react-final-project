@@ -1,13 +1,24 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import logo from './53.jpg'
-import { Link, Outlet } from 'react-router-dom';
-import { Nav, Form, Button, FormControl } from 'react-bootstrap';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { useContext, useState } from "react"
+import { ProductContext } from "./ProductProvider"
 
 
 function Home() {
 
-  return (
+    let navigate = useNavigate()
+
+    function handleChange (event) {
+       if (event.target.value === "") return (
+           navigate(`/products`)
+       )
+       navigate(`/${event.target.value}/searchfilter`)
+    }
+
+    return (
         <>
             <Navbar bg="dark" variant="dark">
                 <Container>
@@ -35,6 +46,7 @@ function Home() {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    onChange={handleChange}
                     />
                 </Form>
                 </Navbar.Collapse>

@@ -4,7 +4,14 @@ import axios from "axios"
 export const ProductContext = createContext()
 
 export const ProductProvider = (props) => {
+
     const [products, setProducts] = useState([])
+
+    // const [order, setOrder] = useState({
+    //     type: "",
+    //     arg1: 0,
+    //     arg2: 0
+    // })
 
     useEffect(() => {
         async function getProducts() {
@@ -36,8 +43,13 @@ export const ProductProvider = (props) => {
         return axios.delete(`http://localhost:3001/products/${id}`).then(refreshProducts)
     }
 
+    function searchProducts(searchQuery) {
+        return axios.get(`http://localhost:3001/products?q=${searchQuery}`).then(response => new Promise ((resolve) => resolve(response.data))
+        )
+    }
+
     return (
-        <ProductContext.Provider value={{products, getProduct, addProduct, updateProduct, deleteProduct}}>
+        <ProductContext.Provider value={{products, getProduct, addProduct, updateProduct, deleteProduct, searchProducts}}>
             {props.children}
         </ProductContext.Provider>
     )

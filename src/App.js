@@ -7,6 +7,7 @@ import ProductList from './ProductList';
 import ProductDetails from './ProductDetails';
 import EditProduct from './EditProduct';
 import NewProduct from './NewProduct';
+import Search from './Search';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='products/:productId/edit' element={<EditProduct/>}/>
           <Route path='products/:productId' element={<ProductDetails/>}/>
           <Route path='products' element={<ProductList/>}/>
+          <Route path=":search/searchfilter" element={<Search />}/>
         </Route>
       </Routes>
     </BrowserRouter>
