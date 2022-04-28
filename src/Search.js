@@ -1,7 +1,6 @@
-import { Stack, Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { ProductContext } from "./ProductProvider";
 import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 
 
@@ -19,7 +18,7 @@ function Search() {
             })
         }
         fetch();
-    }, [params]);
+    }, [params, searchProducts]);
 
     return (
         <>

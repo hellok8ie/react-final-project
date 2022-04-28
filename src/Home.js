@@ -2,9 +2,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import logo from './53.jpg'
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Nav, Form, FormControl, Button } from 'react-bootstrap';
-import { useContext, useState } from "react"
-import { ProductContext } from "./ProductProvider"
+import { Nav, Form, FormControl } from 'react-bootstrap';
 
 
 function Home() {
