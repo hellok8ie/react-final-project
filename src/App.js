@@ -21,7 +21,7 @@ function App() {
           <Route path='products/:productId/edit' element={<EditProduct/>}/>
           <Route path='products/:productId' element={<ProductDetails/>}/>
           <Route path='products' element={<ProductList/>}/>
-          <Route path=":search/searchfilter" element={<Search />}/>
+          <Route path=":search" element={<Search />}/>
         </Route>
       </Routes>
     </BrowserRouter>

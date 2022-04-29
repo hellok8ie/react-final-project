@@ -1,0 +1,21 @@
+div {
+    justify-content: center;
+}
+
+nav {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.footer-link {
+    text-align: center;
+    position: sticky;
+    background-color: black;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: white !important
+}

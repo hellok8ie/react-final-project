@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import logo from './53.jpg'
 import { Outlet, useNavigate } from 'react-router-dom';
 import { Nav, Form, FormControl } from 'react-bootstrap';
+import './Home.css';
 
 
 function Home() {
@@ -10,16 +11,18 @@ function Home() {
     let navigate = useNavigate()
 
     function handleChange (event) {
-       if (event.target.value === "") return (
-           navigate(`/products`)
-       )
-       navigate(`/${event.target.value}/searchfilter`)
+        event.preventDefault();
+
+        if (event.target.value === "") return (
+           navigate(`/products`));
+
+       navigate(`/${event.target.value}`)
     }
 
     return (
         <>
             <Navbar bg="dark" variant="dark">
-                <Container>
+                <Container fluid>
                 <Navbar.Brand href="/">
                     <img
                     alt=""
@@ -30,27 +33,25 @@ function Home() {
                     />{' '}
                 Russell Racing
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
+                <Nav className="justify-content-left">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/about">About Us</Nav.Link>
                     <Nav.Link href="/products">Products</Nav.Link>
                     <Nav.Link href="/products/add">Create</Nav.Link>
+                    <Form className="d-flex">
+                        <FormControl
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                        onChange={handleChange}
+                        />
+                    </Form>
                 </Nav>
-                <Form className="d-flex">
-                    <FormControl
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                    onChange={handleChange}
-                    />
-                </Form>
-                </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Outlet />
+            <Outlet/>
+            <div className='footer-link'>2022 © <a href='https://github.com/hellok8ie'>hellok8ie</a> </div>
         </>
     )
 }

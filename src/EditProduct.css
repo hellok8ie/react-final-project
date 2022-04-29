@@ -1,0 +1,14 @@
+.editForm {
+    padding: 5% 0%;
+    margin-bottom: 20%
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.saveBtn {
+    background-color: #EA8A30 !important;
+    color: white !important;
+    border-color: #EA8A30 !important;
+}

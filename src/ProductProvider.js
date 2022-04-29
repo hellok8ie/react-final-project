@@ -7,18 +7,18 @@ export const ProductProvider = (props) => {
 
     const [products, setProducts] = useState([])
 
-    // const [order, setOrder] = useState({
-    //     type: "",
-    //     arg1: 0,
-    //     arg2: 0
-    // })
-
     useEffect(() => {
         async function getProducts() {
             await refreshProducts()
         }
         getProducts()
     }, []);
+
+    // const [order, setOrder] = useState({
+    //     type: "",
+    //     arg1: 0,
+    //     arg2: 0
+    // })
 
     function refreshProducts () {
         return axios.get("http://localhost:3001/products").then(response => {setProducts(response.data)})
@@ -48,8 +48,12 @@ export const ProductProvider = (props) => {
         )
     }
 
+    function sortProducts(order) {
+        return axios.get(`http://localhost:3001/products?_sort=${order.arg1}&_order=${order.arg2}`).then(refreshProducts)
+    }
+
     return (
-        <ProductContext.Provider value={{products, getProduct, addProduct, updateProduct, deleteProduct, searchProducts}}>
+        <ProductContext.Provider value={{products, getProduct, addProduct, updateProduct, deleteProduct, searchProducts, sortProducts}}>
             {props.children}
         </ProductContext.Provider>
     )

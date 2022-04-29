@@ -1,0 +1,29 @@
+.cardNavs {
+    text-align: center;
+}
+
+.viewLink {
+    background-color: #EA8A30 !important;
+    color: white !important;
+    margin: 0px 6px;
+    padding: 6px 6px
+}
+
+.editLink {
+    margin: 0px 6px;
+    padding: 6px 6px;
+    background-color: #0420E8 !important;
+    color: white !important
+}
+
+.dangerButton {
+    margin: 0px 6px;
+    padding: 6px 6px;
+    border-color: black !important;
+    background-color: black !important;
+    color: white !important
+}
+
+.rowToRuleThemAll {
+    padding: 1%;
+}

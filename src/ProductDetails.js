@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
 import { useState, useContext, useEffect } from "react"
-import { Card } from "react-bootstrap"
+import { Card, Container, Row } from "react-bootstrap"
 import { useNavigate, useParams } from "react-router-dom"
 import { ProductContext } from "./ProductProvider"
 import { Link } from "react-router-dom"
@@ -32,17 +32,21 @@ function ProductDetails() {
         let { id, name, description, size, price, imgUrl } = product
 
         return (
-            <Card className="align-self-start w-25" style={{textAlign: 'center'}}>
-                <Card.Body>
-                    <Card.Img variant="top" src={imgUrl}/>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Subtitle>{`Price: $${price}`}</Card.Subtitle>
-                    <Card.Text>{description}</Card.Text>
-                    <Link to={`/products/${id}/edit`} className="btn btn-primary mx-3">Edit</Link>
-                    <Button variant="danger" onClick={handleDeleteProduct.bind(this,id)}>Delete</Button>
-                    <Link to={`/products`} className="btn btn-secondary mx-3">Product List</Link>
-                </Card.Body>
-            </Card>
+            <Container fluid>
+                <Row>
+                <Card className="w-25" style={{textAlign: 'center', margin: '3% 1%'}}>
+                    <Card.Body>
+                        <Card.Img variant="top" src={imgUrl}/>
+                        <Card.Title>{name}</Card.Title>
+                        <Card.Subtitle>{`Price: $${price}`}</Card.Subtitle>
+                        <Card.Text>{description}</Card.Text>
+                        <Link to={`/products/${id}/edit`} className="btn editLink">Edit</Link>
+                        <Button className="dangerButton" onClick={handleDeleteProduct.bind(this,id)}>Delete</Button>
+                        <Link to={`/products`} className="btn viewLink">Product List</Link>
+                    </Card.Body>
+                </Card>
+                </Row>
+            </Container>
         )
     }
 

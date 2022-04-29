@@ -4,6 +4,8 @@ import { ProductContext } from "./ProductProvider";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button"
 import { useState, useEffect } from "react";
+import './EditProduct.css'
+import { Container } from "react-bootstrap";
 
 function EditProduct () {
 
@@ -47,7 +49,10 @@ function EditProduct () {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Container>
+        <br/>
+        <h1>Edit Product</h1>
+        <Form className="editForm" onSubmit={handleSubmit}>
             <Form.Group className="mb-3" >
                 <Form.Label>Product Name:</Form.Label>
                 <Form.Control type="text" name="name" value={name} onChange={handleChange} />
@@ -68,8 +73,10 @@ function EditProduct () {
                 <Form.Label>Image URL:</Form.Label>
                 <Form.Control type="url" name="imgUrl" value={imgUrl} onChange={handleChange} />
             </Form.Group>
-            <Button type="submit">Save</Button>
+            <Button type="submit" className="saveBtn">Save</Button>
         </Form>
+        <br/>
+        </Container>
         )
 }
 
