@@ -7,16 +7,12 @@ h1 {
     padding-top: 15px;
 }
 
-h3 {
-    padding-bottom: 15px
-}
-
 .custom-card {
     text-align: center;
 }
 
 .card-container {
-    padding: 1% 10%;
+    padding: 1% 10% 2%;
 }
 
 .card-link {
