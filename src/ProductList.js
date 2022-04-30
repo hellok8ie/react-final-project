@@ -41,16 +41,16 @@ function ProductList () {
         <>
             <br/>
             <h1 className="storeTitle">🏁 Fan Store 🏁</h1>
+            
             <Row xs={3} className="g-3">
                 
-                    <ProductContext.Consumer>
+            <ProductContext.Consumer key={0}>
                         {({products}) => (
                             getAllProducts(products)
                         )}
-                    </ProductContext.Consumer>
-              
-            </Row>
+            </ProductContext.Consumer>
 
+            </Row>
         </>
     )
 }
