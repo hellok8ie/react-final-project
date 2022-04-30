@@ -28,7 +28,7 @@ function Search() {
         <Row xs={3} className="g-3">
 
                     {products.map((product) => (
-                        <Card className="col-3" key={product.id}>
+                        <Card className="col-3 searchCard" key={product.id}>
                             <Card.Img variant="top" src={product.imgUrl} />
                             <Card.Body>
                                 <Card.Title>{product.name}</Card.Title>

@@ -15,7 +15,7 @@ function ProductList () {
 
         return products.map((product) =>
             <>
-            <Card className='col-3' key={product.id}>
+            <Card className='col-3 productCard' key={product.id}>
                 <Card.Img variant="top" src={product.imgUrl}/>
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
