@@ -38,7 +38,7 @@ function ProductDetails() {
                     <Card.Body>
                         <Card.Img variant="top" src={imgUrl}/>
                         <Card.Title>{name}</Card.Title>
-                        <Card.Subtitle>{`Price: $${price}`}</Card.Subtitle>
+                        <Card.Subtitle>{`Size: ${size}`}<br/>{`Price: $${price}`}</Card.Subtitle>
                         <Card.Text>{description}</Card.Text>
                         <Link to={`/products/${id}/edit`} className="btn editLink">Edit</Link>
                         <Button className="dangerButton" onClick={handleDeleteProduct.bind(this,id)}>Delete</Button>

@@ -5,10 +5,10 @@
       "name": "Youth Hoodie",
       "description": "Grey hoodie with logo in youth sizes",
       "size": [
-        "youth S",
-        "youth M",
-        "youth L",
-        "youth XL"
+        "S",
+        "M",
+        "L",
+        "XL"
       ],
       "price": 15.99,
       "imgUrl": "https://i.imgur.com/XDG3mCi_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
@@ -18,10 +18,10 @@
       "name": "Men's Half-Zip Pull-over",
       "description": "Dark solid grey half-zip pull-over with logo in men's sizes",
       "size": [
-        "mens S",
-        "mens M",
-        "mens L",
-        "mens XL"
+        "S",
+        "M",
+        "L",
+        "XL"
       ],
       "price": 20.99,
       "imgUrl": "https://i.imgur.com/E7pNqrC.jpg"
@@ -31,10 +31,10 @@
       "name": "Women's Half-Zip Pull-over",
       "description": "Marbled light grey half-zip pull-over with logo in women's sizes",
       "size": [
-        "womens S",
-        "womens M",
-        "womens L",
-        "womens XL"
+        "S",
+        "M",
+        "L",
+        "XL"
       ],
       "price": 20.99,
       "imgUrl": "https://i.imgur.com/Uft3Upm.jpg"

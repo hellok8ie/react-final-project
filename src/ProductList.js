@@ -1,4 +1,4 @@
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row } from "react-bootstrap";
 import { ProductContext } from "./ProductProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ function ProductList () {
                 <Card.Img variant="top" src={product.imgUrl}/>
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
-                    <Card.Subtitle>${product.price}</Card.Subtitle>
+                    <Card.Subtitle>{`Sizes: ${product.size}`}<br/>${product.price}</Card.Subtitle>
                     <br/>
                     <div className="cardNavs">
                     <Link to={`/products/${product.id}`} key={product.id} className="btn viewLink">View</Link>
@@ -39,13 +39,8 @@ function ProductList () {
 
     return (
         <>
-            {/* <br/>
-            <DropdownButton id="dropdown-item-button" title="Sort By:">
-                <Dropdown.Item as="button">Price</Dropdown.Item>
-                <Dropdown.Item as="button">Name</Dropdown.Item>
-            </DropdownButton> */}
             <br/>
-            <h1>🏁 Fan Store 🏁</h1>
+            <h1 className="storeTitle">🏁 Fan Store 🏁</h1>
             <Row xs={3} className="g-3">
                 
                     <ProductContext.Consumer>
