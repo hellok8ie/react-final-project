@@ -15,7 +15,7 @@ function ProductList () {
 
         return products.map((product) =>
             <>
-            <Card className='col-4' key={product.id}>
+            <Card className='col-3' key={product.id}>
                 <Card.Img variant="top" src={product.imgUrl}/>
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
@@ -46,16 +46,14 @@ function ProductList () {
             </DropdownButton> */}
             <br/>
             <h1>🏁 Fan Store 🏁</h1>
-            <Row xs={1} md={2} className="g-5 rowToRuleThemAll">
-                <Col>
-                    <Row>
+            <Row xs={3} className="g-3">
+                
                     <ProductContext.Consumer>
                         {({products}) => (
                             getAllProducts(products)
                         )}
                     </ProductContext.Consumer>
-                    </Row>
-                </Col>
+              
             </Row>
 
         </>

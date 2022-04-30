@@ -2,6 +2,7 @@ import { Card, Col, Row } from "react-bootstrap";
 import { ProductContext } from "./ProductProvider";
 import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
+import './Search.css'
 
 
 function Search() {
@@ -22,11 +23,12 @@ function Search() {
 
     return (
         <>
-        <Row xs={1} md={2} className="g-5 rowToRuleThemAll">
-            <Col>
-                <Row>
+        <br/>
+        <h1>Search Results</h1>
+        <Row xs={3} className="g-3">
+
                     {products.map((product) => (
-                        <Card className="align-self-start w-25" key={product.id}>
+                        <Card className="col-3" key={product.id}>
                             <Card.Img variant="top" src={product.imgUrl} />
                             <Card.Body>
                                 <Card.Title>{product.name}</Card.Title>
@@ -39,9 +41,9 @@ function Search() {
                             </Card.Body>
                         </Card>
                     ))}
-                </Row>
-            </Col>
+        
         </Row>
+        <br/>
         </>
     )
 }

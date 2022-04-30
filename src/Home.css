@@ -9,13 +9,15 @@ nav {
 .footer-link {
     text-align: center;
     position: sticky;
+    width: 100%;
     background-color: black;
     color: white;
     font-family: 'Permanent Marker', cursive;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    flex-shrink: 1;
 }
 
-a {
+.helloKT {
     color: white !important
 }

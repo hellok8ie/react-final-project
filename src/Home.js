@@ -51,7 +51,7 @@ function Home() {
                 </Container>
             </Navbar>
             <Outlet/>
-            <div className='footer-link'>2022 © <a href='https://github.com/hellok8ie'>hellok8ie</a> </div>
+            <div className='footer-link'>2022 © <a className="helloKT" href='https://github.com/hellok8ie'>hellok8ie</a> </div>
         </>
     )
 }
