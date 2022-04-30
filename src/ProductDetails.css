@@ -12,3 +12,9 @@
     margin: 0px 6px;
     padding: 6px 6px
 }
+
+.detailsCardHolder {
+    margin-bottom: 8%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}

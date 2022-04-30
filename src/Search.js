@@ -23,9 +23,9 @@ function Search() {
 
     return (
         <>
-        <br/>
         <h1>Search Results</h1>
-        <Row xs={3} className="g-3">
+        <br/>
+        <Row xs={3} className="searchCardHolder">
 
                     {products.map((product) => (
                         <Card className="col-3 searchCard" key={product.id}>

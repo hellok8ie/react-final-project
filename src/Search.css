@@ -1,3 +1,9 @@
 .searchCard {
     margin: 2%
 }
+
+.searchCardHolder {
+    margin-bottom: 13%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}

@@ -5,6 +5,7 @@ import { Card, Container, Row } from "react-bootstrap"
 import { useNavigate, useParams } from "react-router-dom"
 import { ProductContext } from "./ProductProvider"
 import { Link } from "react-router-dom"
+import "./ProductDetails.css"
 
 function ProductDetails() {
 
@@ -32,9 +33,11 @@ function ProductDetails() {
         let { id, name, description, size, price, imgUrl } = product
 
         return (
-            <Container fluid>
-                <Row>
-                <Card className="w-25" style={{textAlign: 'center', margin: '3% 1%'}}>
+            <>
+            <h1>Product Details</h1>
+            <br/>
+            <Row xs={3} className="detailsCardHolder">
+                <Card style={{textAlign: 'center'}}>
                     <Card.Body>
                         <Card.Img variant="top" src={imgUrl}/>
                         <Card.Title>{name}</Card.Title>
@@ -45,8 +48,8 @@ function ProductDetails() {
                         <Link to={`/products`} className="btn viewLink">Product List</Link>
                     </Card.Body>
                 </Card>
-                </Row>
-            </Container>
+            </Row>
+            </>
         )
     }
 
